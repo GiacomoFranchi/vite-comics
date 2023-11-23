@@ -9,7 +9,7 @@ export default {
 <template>
   <main>
     <section>
-      <h2> - - > content goes here </h2>
+      <h2> - - > Content goes here </h2>
     </section>
   </main>
 </template>
@@ -19,7 +19,7 @@ export default {
 @use "../style/partials/variables" as *;
 
 main{
-  background-color: rgb(28, 28, 28);
+  background-color: $bgColor;
   section{
     width: 80%;
     margin: 0 auto;
