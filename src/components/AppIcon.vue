@@ -67,7 +67,7 @@ export default {
                 span{
                     width: calc(100% - 50px - 1rem);
                     color: white;
-                    font-size: 0.8rem;
+                    font-size: 0.6rem;
                     margin: 0 0.2rem;
                 }
             }
