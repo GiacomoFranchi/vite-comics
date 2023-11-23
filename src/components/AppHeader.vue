@@ -73,14 +73,12 @@ header{
     margin: 0 auto;
     padding: 1rem;
     @include flex(space-between, center, row);
-
     .logo{
         text-align: center;
         img{
             width: 100px;
         }
     }
-    
     nav{
         width: calc(70% - 90px);
         ul{
@@ -94,11 +92,11 @@ header{
                     text-decoration: none;
                     color: black;
                     font-weight: bold;
-                    &:hover {
-                    border-bottom: 2px solid $activeColor;
-                    }
                     &.active {
-                        border-bottom: 4px solid $activeColor;
+                    border-bottom: 4px solid $activeColor;
+                    }
+                    &:hover {
+                        border-bottom: 2.5px solid $activeColor;
                     color: $activeColor;
                     }
                 }
@@ -106,5 +104,4 @@ header{
         }
     }
 }
-
 </style>
