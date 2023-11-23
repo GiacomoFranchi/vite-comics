@@ -80,14 +80,14 @@ header{
         }
     }
     nav{
-        width: calc(70% - 90px);
+        width: calc(80% - 90px);
         ul{
             @include flex(space-evenly, center, row);
             list-style: none;
             font-size: 0.8rem;
             li{
                 a {
-                    padding: 1rem;
+                    padding: 0.2rem;
                     padding-bottom: 2.9rem;
                     text-decoration: none;
                     color: black;
