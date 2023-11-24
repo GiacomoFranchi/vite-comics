@@ -28,15 +28,17 @@ export default {
 
 <template>
     <section class="footer-top">
-        <div v-for="(section, index) in sections">
-            <h3>{{ section.nameSec }}</h3>
-            <ul>
-                <li v-for="(link , index) in sections[index].links">
-                    <a href="">{{ link }}</a>
-                </li>
-            </ul>
+        <div class="footer-sect">
+            <div v-for="(section, index) in sections">
+                <h3>{{ section.nameSec }}</h3>
+                <ul>
+                    <li v-for="(link , index) in sections[index].links">
+                        <a href="">{{ link }}</a>
+                    </li>
+                </ul>
+            </div>
+            <img class="logo-bkg" src="../assets/img/dc-logo-bg.png" alt="logo DC Background">
         </div>
-        <img class="logo-bkg" src="../assets/img/dc-logo-bg.png" alt="logo DC Background">
     </section>
 </template>
 
@@ -48,27 +50,34 @@ export default {
     position: relative;
     width: 100%;
     background-image: url(../assets/img/footer-bg.jpg);
-    display: flex; 
-    div{
-        margin: 1.5rem 2rem;
-        h3{
+    z-index: -2;
+    .footer-sect{
+        width: 80%;
+        display: flex; 
+        margin: 0 auto;
+        div{
+            margin: 0.5rem;
+            h3{
             color: white;
-        }
-
-        li{
-            list-style: none;
-            a{
-                color:whitesmoke;
-                font-size: 0.6rem;
-                text-decoration: none;
+            }
+            li{
+                list-style: none;
+                line-height: 0.5rem;
+                a{
+                    color:whitesmoke;
+                    font-size: 0.6rem;
+                    text-decoration: none;
+                }
             }
         }
-    }
-    .logo-bkg{
-        position: absolute;
-        width: 300px;
-        right: 5%;
-        top: -10px;
-    }
+        .logo-bkg{
+            position: absolute;
+            width: 200px;
+            right: 10%;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: -1;
+        }
+    }   
 }
 </style>

@@ -50,6 +50,7 @@ export default {
 </script>
 
 <template>
+    <div class="header-top"></div>
     <header>
         <div class="logo">
             <img src="../assets/img/dc-logo.png" alt="DC Logo" />
@@ -68,35 +69,42 @@ export default {
 @use "../style/partials/mixin" as *;
 @use "../style/partials/variables" as *;
 
+.header-top{
+  width: 100%;
+  height: 10px;
+  background-color: $bgColor;
+}
+
 header{
     width: 80%;
     margin: 0 auto;
-    padding: 1rem;
+    padding: 0.2rem;
     @include flex(space-between, center, row);
     .logo{
         text-align: center;
         img{
-            width: 100px;
+            width: 70px;
         }
     }
     nav{
         width: calc(80% - 90px);
         ul{
-            @include flex(space-evenly, center, row);
+            @include flex(space-evenly,shrink , row);
             list-style: none;
             font-size: 0.8rem;
             li{
                 a {
                     padding: 0.2rem;
-                    padding-bottom: 2.9rem;
+                    padding-bottom: 1.85rem;
                     text-decoration: none;
                     color: black;
                     font-weight: bold;
                     &.active {
-                    border-bottom: 4px solid $activeColor;
+                    border-bottom: 6px solid $activeColor;
+                    padding-bottom: 1.7rem;
                     }
                     &:hover {
-                        border-bottom: 2.5px solid $activeColor;
+                        border-bottom: 4px solid $activeColor;
                     color: $activeColor;
                     }
                 }

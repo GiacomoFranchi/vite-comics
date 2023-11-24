@@ -5,6 +5,11 @@ export default {
         icons:["facebook","periscope","pinterest","twitter","youtube"]
     }
   },
+  methods:{
+    getImgUrl(icon){
+        return new URL(`../assets/img/footer-${icon}.png`, import.meta.url).href;
+    }
+  }
 };
 </script>
 
@@ -14,7 +19,7 @@ export default {
         <div>
             <h3>FOLLOW US</h3>
             <div class="logo-img" v-for="icon in icons">
-                <img :src="`../assets/img/footer-${icon}.png`" alt="">
+                <img :src="getImgUrl(icon)" alt="asd">
             </div>
         </div>
     </footer>
@@ -40,9 +45,11 @@ footer{
         @include flex(space-between, center, row);
         h3{
             color: $activeColor;
+            margin-right: 20px;
         }
         .logo-img{
-            width: 30px;
+            width: 20px;
+            padding: 0.2rem;
             img{
                 width: 100%;
                 color: white;

@@ -5,27 +5,32 @@ export default {
         icons:[
             {
                 iconName: "DIGITAL COMICS",
-                iconImg: "digital-comics",
+                iconImg: "digital-comics.png",
             },
             {
                 iconName: "DC MERCHANDISE",
-                iconImg: "merchandise",
+                iconImg: "merchandise.png",
             },
             {
                 iconName: "SUBSCRIPTION",
-                iconImg: "shop-locator",
+                iconImg: "shop-locator.png",
             },
             {
                 iconName: "COMIC SHOP LOCATOR",
-                iconImg: "subscriptions",
+                iconImg: "subscriptions.png",
             },
             {
                 iconName: "DC POWER VISA",
-                iconImg: "power-visa",
+                iconImg: "power-visa.svg",
             },
         ]
-    };
-  },
+    }
+},
+    methods:{
+        getImgUrl(iconImg) {
+            return new URL(`../assets/img/buy-comics-${iconImg}`, import.meta.url).href;
+        }
+    }
 };
 </script>
 
@@ -34,7 +39,7 @@ export default {
         <div class="section-icon" >
             <div class="icon" v-for="icon in icons">
                 <div class="img-icon">
-                    <img :src="`../assets/img/buy-comics-${icon.iconImg}.png`"
+                    <img :src="getImgUrl(icon.iconImg)"
                      :alt="`${icon.iconName} icon`" />
                 </div>
                 <span>{{icon.iconName}}</span>
@@ -59,7 +64,8 @@ export default {
                 flex-wrap: wrap;
                 width: calc(100% / 5);
                 .img-icon{
-                    width: 50px;
+                    width: 35px;
+                    margin-right: 5px;
                     img{
                         width: 100%;
                     }
