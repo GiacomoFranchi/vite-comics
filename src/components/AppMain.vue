@@ -1,5 +1,9 @@
 <script>
+import AppCard from './AppCard.vue';
 export default {
+  components:{
+    AppCard
+  },
     data() {
       return {
         
@@ -10,9 +14,7 @@ export default {
 
 <template>
   <main>
-    <section>
-      <h2> - - > Content goes here </h2>
-    </section>
+    <AppCard />
   </main>
 </template>
 
