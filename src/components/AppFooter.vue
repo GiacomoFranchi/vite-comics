@@ -15,11 +15,13 @@ export default {
 
 <template>
     <footer>
-        <button>SING-UP NOW</button>
-        <div>
-            <h3>FOLLOW US</h3>
-            <div class="logo-img" v-for="icon in icons">
-                <img :src="getImgUrl(icon)" alt="asd">
+        <div class="footer-container">
+            <button>SING-UP NOW!</button>
+            <div>
+                <h3>FOLLOW US</h3>
+                <div class="logo-img" v-for="icon in icons">
+                    <img :src="getImgUrl(icon)" alt="asd">
+                </div>
             </div>
         </div>
     </footer>
@@ -31,28 +33,30 @@ export default {
 footer{
     width: 100%;
     background-color: $bgColor;
-    height: 100px;
-    padding: 1.5rem;
-    @include flex(space-between, center, row);
-    button{
-        background-color: $bgColor;
-        color: white;
-        border: 2px solid $activeColor;
-        margin-left: 1.5rem;
-        padding: 1rem;
-    }
-    div{
+    padding: 1rem;
+    .footer-container{
         @include flex(space-between, center, row);
-        h3{
-            color: $activeColor;
-            margin-right: 20px;
+        width: 80%;
+        margin: 0 auto;
+        button{
+            background-color: $bgColor;
+            color: white;
+            border: 2px solid $activeColor;
+            padding: 1rem;
         }
-        .logo-img{
-            width: 20px;
-            padding: 0.2rem;
-            img{
+        div{
+            @include flex(space-between, center, row);
+            h3{
+                color: $activeColor;
+                margin-right: 20px;
+            }
+            .logo-img{
+                width: 25px;
+                padding: 0.2rem;
+                img{
                 width: 100%;
                 color: white;
+                }
             }
         }
     }

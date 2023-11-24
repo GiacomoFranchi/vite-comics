@@ -1,5 +1,9 @@
 <script>
+import AppHero from './AppHero.vue';
 export default {
+  components:{
+    AppHero
+  },
   data() {
     return {
       navItems: [
@@ -63,6 +67,7 @@ export default {
             </ul>
         </nav>
     </header>
+    <AppHero />
 </template>
 
 <style scoped lang="scss">
